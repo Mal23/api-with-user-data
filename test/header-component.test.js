@@ -3,6 +3,40 @@ const test = QUnit.test;
 
 QUnit.module('Create header test');
 
+function makeProfile(user) {
+    const html = /*html*/ `
+    <div id="profile">
+        <span>Name: Bob Burger</span>
+        <img id="user-icon" src="./assets/unknown-user.png" alt="unknown user person outline">
+        <button>Sign Out</button>
+    </div>
+    `;
+
+    const template = document.createElement('template');
+    template.innerHTML = html;
+    return template.content;
+}
+
+test('makes profile template', assert => {
+    //arrange
+    const user = {
+        displayName: 'Bob Burger',
+        photoUrl: './assets/unknown-user.png'
+    };
+    
+    const expected = /*html*/ `
+    <div id="profile">
+        <span>Name: Bob Burger</span>
+        <img id="user-icon" src="./assets/unknown-user.png" alt="unknown user person outline">
+        <button>Sign Out</button>
+    </div>
+`;
+    //act 
+    const dom = makeProfile(user);   
+    //assert
+    assert.htmlEqual(dom, expected);
+});
+
 test('make header template', assert => {
     //arrange
     const expected = /*html*/ `
