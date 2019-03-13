@@ -1,0 +1,10 @@
+#header-container {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 75px;
+}
+
+#logo {
+    width: 75px;
+}
+
