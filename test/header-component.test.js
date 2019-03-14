@@ -1,21 +1,8 @@
-import makeHeader from '../src/make-header.js';
+import { makeHeader, makeProfile } from '../src/header-component.js';
 const test = QUnit.test;
 
+
 QUnit.module('Create header test');
-
-function makeProfile(user) {
-    const html = /*html*/ `
-    <div id="profile">
-        <span>Name: Bob Burger</span>
-        <img id="user-icon" src="./assets/unknown-user.png" alt="unknown user person outline">
-        <button>Sign Out</button>
-    </div>
-    `;
-
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
 
 test('makes profile template', assert => {
     //arrange
