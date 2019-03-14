@@ -11,13 +11,13 @@ test('makes profile template', assert => {
         photoUrl: './assets/unknown-user.png'
     };
     
-    const expected = /*html*/ `
-    <div id="profile">
-        <span>Name: Bob Burger</span>
-        <img id="user-icon" src="./assets/unknown-user.png" alt="unknown user person outline">
-        <button>Sign Out</button>
-    </div>
-`;
+    const expected = /*html*/`
+        <div id="profile">
+            <span>Name: Bob Burger</span>
+            <img id="user-icon" src="./assets/unknown-user.png" alt="unknown user person outline">
+            <button>Sign Out</button>
+        </div>
+    `;
     //act 
     const dom = makeProfile(user);   
     //assert

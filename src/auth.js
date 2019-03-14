@@ -11,6 +11,5 @@ ui.start('#firebaseui-auth-container', {
         firebase.auth.GoogleAuthProvider.PROVIDER_ID
     ],
     signInSuccessUrl: './',
-    credentialHelper:
-firebaseui.auth.CredentialHelper.NONE
+    credentialHelper: firebaseui.auth.CredentialHelper.NONE
 });
